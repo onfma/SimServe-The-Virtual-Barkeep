@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2832636919375502360}
   - component: {fileID: 1216068452050506685}
   - component: {fileID: 3964470153149114231}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: jack_daniels_bottle
-  m_TagString: Untagged
+  m_TagString: BarObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -95,9 +95,9 @@ GameObject:
   - component: {fileID: 6719915925081443707}
   - component: {fileID: 2684922628720116948}
   - component: {fileID: 2029430654275086598}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: BarObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5175889837826024805}
   - component: {fileID: 5175889837826024731}
   - component: {fileID: 5175889837826024804}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: BarObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -66,9 +66,9 @@ GameObject:
   - component: {fileID: 4638370201301393078}
   - component: {fileID: 8642713942925021459}
   - component: {fileID: 5770766728758584793}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: glass2
-  m_TagString: Untagged
+  m_TagString: BarObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

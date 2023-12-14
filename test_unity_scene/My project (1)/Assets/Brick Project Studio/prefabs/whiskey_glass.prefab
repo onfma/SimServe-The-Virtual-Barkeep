@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 434811301658792866}
   - component: {fileID: 434811301658792867}
   - component: {fileID: 434811301658792865}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: BarObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -66,9 +66,9 @@ GameObject:
   - component: {fileID: 108785604072879609}
   - component: {fileID: 3903952904045705820}
   - component: {fileID: 1281651443831361174}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: whiskey_glass
-  m_TagString: Untagged
+  m_TagString: BarObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

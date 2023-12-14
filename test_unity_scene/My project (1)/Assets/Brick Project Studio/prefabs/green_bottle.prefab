@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2067070598674494314}
   - component: {fileID: 7799291216798896041}
   - component: {fileID: 7818234069822153328}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: BarObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66,9 +66,9 @@ GameObject:
   - component: {fileID: 6562715015640418811}
   - component: {fileID: 7835323391376721502}
   - component: {fileID: 5429193072531567252}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: green_bottle
-  m_TagString: Untagged
+  m_TagString: BarObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5278364417192815653}
   - component: {fileID: 9146634843882906496}
   - component: {fileID: 6416407516947224394}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shaker
-  m_TagString: Untagged
+  m_TagString: BarObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -95,9 +95,9 @@ GameObject:
   - component: {fileID: 5677417376153722394}
   - component: {fileID: 5677417376153722392}
   - component: {fileID: 5677417376153722393}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: BarObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
