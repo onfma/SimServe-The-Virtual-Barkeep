@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 8995598257625837448}
   - component: {fileID: 5438399332793851949}
   - component: {fileID: 7826662591982654695}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: martini_glass
-  m_TagString: Untagged
+  m_TagString: BarObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -95,9 +95,9 @@ GameObject:
   - component: {fileID: 8889104598697207020}
   - component: {fileID: 8889104598697207022}
   - component: {fileID: 8889104598697207023}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: BarObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
