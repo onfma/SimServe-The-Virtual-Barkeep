@@ -1,9 +1,8 @@
-using UnityEngine;
-using UnityEngine.InputSystem;
+﻿using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class HandController : MonoBehaviour
 {
-    public Camera externalCamera;
     public float interactionDistance = 10f;
     Animator animator;
 
@@ -14,23 +13,29 @@ public class HandController : MonoBehaviour
 
     void Update()
     {
-        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
+        if (Input.GetMouseButtonDown(0))
         {
-            Ray ray = externalCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
-            RaycastHit hit;
+            Camera mainCamera = Camera.main;
 
-            if (Physics.Raycast(ray, out hit, interactionDistance))
+            if (mainCamera != null)
             {
-                Debug.Log("Hit object: " + hit.collider.gameObject.name);
-                Debug.Log("Hit object tag: " + hit.collider.tag);
+                Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
 
-                if (hit.collider.CompareTag("BarObject"))
+                RaycastHit hit;
+
+                if (Physics.Raycast(ray, out hit, interactionDistance))
                 {
-                    animator.SetTrigger("Active");
-                }
-                else
-                {
-                    Debug.Log("Hit object with incorrect tag.");
+                    Debug.Log("Hit object: " + hit.collider.gameObject.name);
+                    Debug.Log("Hit object tag: " + hit.collider.tag);
+
+                    if (hit.collider.CompareTag("BarObject"))
+                    {
+                        animator.SetTrigger("Active");
+                    }
+                    else
+                    {
+                        Debug.Log("Hit object with incorrect tag.");
+                    }
                 }
             }
         }
