@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18300802, g: 0.22869262, b: 0.30677655, a: 1}
+  m_IndirectSpecularColor: {r: 0.18300837, g: 0.22869337, b: 0.30677772, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6227,7 +6227,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 247564027}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.08, y: 0, z: -0.105}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20267,7 +20267,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836226723}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -29539,6 +29539,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Int_FFK_01_Floor_01 (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 2467845069284968302, guid: 3c0b460c20e5c954d8523df4157882d1,
+        type: 3}
+      propertyPath: m_TagString
+      value: New tag
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c0b460c20e5c954d8523df4157882d1, type: 3}
 --- !u!4 &1200309293 stripped
@@ -29618,6 +29623,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Int_FFK_01_Floor_01 (53)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2467845069284968302, guid: 3c0b460c20e5c954d8523df4157882d1,
+        type: 3}
+      propertyPath: m_TagString
+      value: New tag
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c0b460c20e5c954d8523df4157882d1, type: 3}
@@ -33605,6 +33615,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Int_FFK_01_Floor_01 (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2467845069284968302, guid: 3c0b460c20e5c954d8523df4157882d1,
+        type: 3}
+      propertyPath: m_TagString
+      value: New tag
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c0b460c20e5c954d8523df4157882d1, type: 3}
@@ -39481,11 +39496,11 @@ MonoBehaviour:
   m_MovementType: 1
   m_TrackPosition: 1
   m_SmoothPosition: 1
-  m_SmoothPositionAmount: 5
+  m_SmoothPositionAmount: 1
   m_TightenPosition: 0.5
   m_TrackRotation: 1
   m_SmoothRotation: 1
-  m_SmoothRotationAmount: 5
+  m_SmoothRotationAmount: 1
   m_TightenRotation: 0.5
   m_ThrowOnDetach: 1
   m_ThrowSmoothingDuration: 0.25
@@ -40862,7 +40877,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1644765044}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 940cd6729512c094193bdb7cc4b6cd19, type: 3}
   m_Name: 
@@ -46401,11 +46416,11 @@ MonoBehaviour:
   m_MovementType: 1
   m_TrackPosition: 1
   m_SmoothPosition: 1
-  m_SmoothPositionAmount: 5
+  m_SmoothPositionAmount: 1
   m_TightenPosition: 0.5
   m_TrackRotation: 1
   m_SmoothRotation: 1
-  m_SmoothRotationAmount: 5
+  m_SmoothRotationAmount: 1
   m_TightenRotation: 0.5
   m_ThrowOnDetach: 1
   m_ThrowSmoothingDuration: 0.25
@@ -49935,6 +49950,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Int_FFK_01_Floor_01 (52)
       objectReference: {fileID: 0}
+    - target: {fileID: 2467845069284968302, guid: 3c0b460c20e5c954d8523df4157882d1,
+        type: 3}
+      propertyPath: m_TagString
+      value: New tag
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c0b460c20e5c954d8523df4157882d1, type: 3}
 --- !u!4 &2007082814 stripped
@@ -49969,7 +49989,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2007569562}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.32, z: 0.36}
+  m_LocalPosition: {x: 0, y: 1.399, z: 0.556}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

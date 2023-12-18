@@ -3,30 +3,46 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class HandController : MonoBehaviour
 {
-    private XRGrabInteractable grabInteractable;
+    private Animator animator;
+    private bool isCollidingWithBarObject = false;
 
-    private void Start()
+    void Start()
     {
-        // Asigură-te că avem componenta XRGrabInteractable
-        grabInteractable = GetComponent<XRGrabInteractable>();
+        animator = GetComponentInChildren<Animator>();
 
-        // Adaugă funcții de gestionare a apucării și eliberării
-        grabInteractable.onSelectEntered.AddListener(OnGrab);
-        grabInteractable.onSelectExited.AddListener(OnRelease);
+        if (animator == null)
+        {
+            Debug.LogError("Animator component not found on children. Make sure it's set up correctly.");
+        }
     }
 
-    private void OnGrab(XRBaseInteractor interactor)
+    void Update()
     {
-        // Logică pentru apucarea obiectului
-        Debug.Log("Obiect apucat!");
+        if (isCollidingWithBarObject)
+        {
+            animator.SetTrigger("Active");
+        }
     }
 
-    private void OnRelease(XRBaseInteractor interactor)
+    void OnCollisionEnter(Collision collision)
     {
-        // Logică pentru eliberarea obiectului
-        Debug.Log("Obiect eliberat!");
+        if (collision.collider.CompareTag("BarObject"))
+        {
+            Debug.Log("Collision with BarObject detected");
+
+            isCollidingWithBarObject = true;
+        }
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        if (collision.collider.CompareTag("BarObject"))
+        {
+            isCollidingWithBarObject = false;
+        }
     }
 }
+
 
 
 // using UnityEngine;
