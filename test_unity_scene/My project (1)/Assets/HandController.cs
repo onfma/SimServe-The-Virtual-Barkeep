@@ -20,7 +20,10 @@ public class HandController : MonoBehaviour
     {
         if (isCollidingWithBarObject)
         {
+            //if (Input.GetKeyDown(KeyCode.G))
+            //{
             animator.SetTrigger("Active");
+            //}
         }
     }
 
