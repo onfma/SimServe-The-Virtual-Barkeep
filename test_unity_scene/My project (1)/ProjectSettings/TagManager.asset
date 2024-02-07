@@ -6,6 +6,11 @@ TagManager:
   tags:
   - BarObject
   - New tag
+  - WineBottle
+  - GreenBottle
+  - JDBottle
+  - BeerBottle
+  - Shaker
   layers:
   - Default
   - TransparentFX
