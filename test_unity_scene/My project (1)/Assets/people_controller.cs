@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class people_controller : MonoBehaviour
 {
+    public orders_script order_script;
     public GameObject Man1;
     public GameObject Man2;
     public GameObject Man3;
@@ -69,6 +70,7 @@ public class people_controller : MonoBehaviour
             animator.SetBool("entering", false);
             animator.SetTrigger("start order");
         }
+        int myOrder = order_script.NewOrder();
 
         currentPosition = newClient.transform.position;
         currentPosition.y = 0.1f;
@@ -125,6 +127,13 @@ public class people_controller : MonoBehaviour
             animator.SetTrigger("liked drink");
             animator.SetTrigger("leaving");
 
+        }
+        if (myOrder == 1)
+        {
+            order_script.HideOrder1();
+        }
+        else{
+            order_script.HideOrder2();
         }
         yield return new WaitForSeconds(30);
         if(gone == "left"){

@@ -32,9 +32,6 @@ public class orders_script : MonoBehaviour
         drinksAndColors.Add("JDBottle", material_jd);
         drinksAndColors.Add("WineBottle", material_wine);
         drinksAndColors.Add("GreenBottle", material_green);
-
-        NewOrder();
-        NewOrder();
     }
     public void HideOrder1()
     {
@@ -68,7 +65,7 @@ public class orders_script : MonoBehaviour
         }
     }
 
-    public void NewOrder()
+    public int NewOrder()
     {
         // Creează un dicționar pentru a stoca comanda
         Dictionary<string, Material> newOrder = new Dictionary<string, Material>();
@@ -126,6 +123,7 @@ public class orders_script : MonoBehaviour
                 }
             }
             ShowOrder1();
+            return 1;
         }
         else
         {
@@ -163,6 +161,7 @@ public class orders_script : MonoBehaviour
                 }
             }
             ShowOrder2();
+            return 2;
         }
     }
 
