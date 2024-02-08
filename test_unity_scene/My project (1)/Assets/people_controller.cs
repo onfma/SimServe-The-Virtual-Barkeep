@@ -13,10 +13,13 @@ public class people_controller : MonoBehaviour
     public List<GameObject> clientModels;
     public List<GameObject> currentClients = new List<GameObject>();
     public float rate;
+    public bool right, left;
 
     // Start is called before the first frame update
     void Start()
     {
+        right = false;
+        left = false;
         clientModels = new List<GameObject>(){
             Man1, 
             Man2,
@@ -33,7 +36,7 @@ public class people_controller : MonoBehaviour
     {
         while (true)
         {
-            if (currentClients.Count < 4)
+            if (currentClients.Count < 3)
             {
                 StartCoroutine(CreateNewClient());
                 yield return new WaitForSeconds(rate);
@@ -52,12 +55,13 @@ public class people_controller : MonoBehaviour
         GameObject newClient = Instantiate(character, transform.position, Quaternion.identity);
         newClient.transform.parent = transform;
         currentClients.Add(newClient); 
+        string gone = "";
 
         Vector3 currentPosition = newClient.transform.position;
         currentPosition.y = 0.1f;
         newClient.transform.position = currentPosition;
 
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(5);
 
         Animator animator = newClient.GetComponent<Animator>();
         if (animator != null)
@@ -73,17 +77,21 @@ public class people_controller : MonoBehaviour
         yield return new WaitForSeconds(4);
 
         animator.SetBool("ordering", false);
-        switch (currentClients.Count)
-        {
-            case 1:
+        if(right == false){
+            animator.SetTrigger("done ordering right");
+            right = true;
+            gone = "right";
+        }
+        else{
+            if(left == false){
                 animator.SetTrigger("done ordering left");
-                break;
-            case 2:
-                animator.SetTrigger("done ordering right");
-                break;
-            case 3:
-            default:
-                break;
+                left = true;
+                gone = "left";
+            }
+            else{
+                animator.SetBool("stay in front", true);
+                gone = "stayed";
+            }
         }
 
         currentPosition = newClient.transform.position;
@@ -102,12 +110,13 @@ public class people_controller : MonoBehaviour
         currentPosition.y = 0.1f;
         newClient.transform.position = currentPosition;
 
+
         yield return new WaitForSeconds(5);
         animator.SetBool("drunk idle", false);
         animator.SetBool("simple idle", false);
         // in loc de yeild wait for drink delivery
         // while distanta dintre personaj si un pahar < min distance
-
+        
         if (animator != null)
         {
             animator.SetBool("waiting for drink", false);
@@ -118,6 +127,18 @@ public class people_controller : MonoBehaviour
 
         }
         yield return new WaitForSeconds(30);
+        if(gone == "left"){
+            left = false;
+        }
+        else
+        {
+            if(gone == "right"){
+                right = false;
+            }
+            else{
+                animator.SetBool("stay in front", false);
+            }
+        }
         
         Destroy(newClient);
 

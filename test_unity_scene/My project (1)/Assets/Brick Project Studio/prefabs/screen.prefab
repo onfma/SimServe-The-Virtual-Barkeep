@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 2571833721702515822}
   - component: {fileID: 4031068479653880616}
   m_Layer: 5
-  m_Name: ingredient1
+  m_Name: o2_ingredient1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -729,8 +729,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7951335173888912604}
-  - {fileID: 46547176676304794}
-  - {fileID: 4809442178503750391}
+  - {fileID: 5628540375948198351}
   m_Father: {fileID: 1971379688243394608}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -845,7 +844,7 @@ GameObject:
   - component: {fileID: 2811438539446582974}
   - component: {fileID: 4878994503534615596}
   m_Layer: 5
-  m_Name: ingredient2
+  m_Name: o2_ingredient2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -947,7 +946,7 @@ GameObject:
   - component: {fileID: 6100232891237723236}
   - component: {fileID: 620186980875764226}
   m_Layer: 5
-  m_Name: ingredient3
+  m_Name: o2_ingredient3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1060,19 +1059,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3201142932202816972}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1.5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1.5003078}
   m_LocalScale: {x: 1, y: 1.457578, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1638650742928216264}
   - {fileID: 7809733315005740549}
-  m_Father: {fileID: 3269797518751409153}
-  m_RootOrder: 1
+  m_Father: {fileID: 5628540375948198351}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.369}
+  m_AnchoredPosition: {x: 0, y: -0.36900568}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!65 &4212034538063686469
@@ -1101,7 +1100,7 @@ GameObject:
   - component: {fileID: 1669583297779669069}
   - component: {fileID: 5902622118117192004}
   m_Layer: 5
-  m_Name: ingredient3
+  m_Name: o1_ingredient3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1214,19 +1213,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4040947452277874539}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2.2}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2.200368}
   m_LocalScale: {x: 1, y: 1.4575783, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6521752948869980661}
   - {fileID: 4225512784109796436}
-  m_Father: {fileID: 3269797518751409153}
-  m_RootOrder: 2
+  m_Father: {fileID: 5628540375948198351}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.697}
+  m_AnchoredPosition: {x: 0, y: -0.6969934}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!65 &2532876650895921785
@@ -1255,7 +1254,7 @@ GameObject:
   - component: {fileID: 1358852303338355486}
   - component: {fileID: 6186024768662585033}
   m_Layer: 5
-  m_Name: ingredient1
+  m_Name: o1_ingredient1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1462,7 +1461,7 @@ GameObject:
   - component: {fileID: 467358896302844171}
   - component: {fileID: 5271256013584925283}
   m_Layer: 5
-  m_Name: ingredient2
+  m_Name: o1_ingredient2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1551,3 +1550,69 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9999999, y: 1.0000002, z: 0.9999999}
   m_Center: {x: -0.00000023841856, y: -0.00000075500094, z: -0.00000016032983}
+--- !u!1 &8500952539199596771
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5628540375948198351}
+  - component: {fileID: 1084609467773339538}
+  m_Layer: 5
+  m_Name: orders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5628540375948198351
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8500952539199596771}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 46547176676304794}
+  - {fileID: 4809442178503750391}
+  m_Father: {fileID: 3269797518751409153}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1084609467773339538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8500952539199596771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9af0cdad7117e0d43901c2d3cda3057a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  order1: {fileID: 3201142932202816972}
+  order2: {fileID: 4040947452277874539}
+  order1_ingredient1: {fileID: 4205423163373857682}
+  order1_ingredient2: {fileID: 7213192399684417035}
+  order1_ingredient3: {fileID: 3966076376034103088}
+  order2_ingredient1: {fileID: 222228612277581718}
+  order2_ingredient2: {fileID: 2267193735818610500}
+  order2_ingredient3: {fileID: 2459795858176148024}
+  material_beer: {fileID: 2100000, guid: 3bded00981e95504a8e47f996835ca9a, type: 2}
+  material_jd: {fileID: 2100000, guid: 88b88f875cf0af442996954ba27bdf64, type: 2}
+  material_wine: {fileID: 2100000, guid: 65d72af2f614466478d9d8d8d7593b95, type: 2}
+  material_green: {fileID: 2100000, guid: 97cb562e985012a4f8db1dfe9f95115b, type: 2}
+  material_invizibil: {fileID: 2100000, guid: 2a750b98e3c949c439699c9137dc3918, type: 2}
+  order1_ingredients: []
+  order2_ingredients: []
