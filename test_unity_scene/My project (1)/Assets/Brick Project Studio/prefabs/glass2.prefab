@@ -67,6 +67,7 @@ GameObject:
   - component: {fileID: 5770766728758584793}
   - component: {fileID: -8846376839483956187}
   - component: {fileID: 5213845051989431488}
+  - component: {fileID: 5515546972173399532}
   m_Layer: 6
   m_Name: glass2
   m_TagString: BarObject
@@ -233,3 +234,18 @@ MonoBehaviour:
   m_ThrowAngularVelocityScale: 1
   m_GravityOnDetach: 0
   m_RetainTransformParent: 1
+--- !u!114 &5515546972173399532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5410263185815225356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a0cc23904b7dd7478cdbba4ba1bb6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  peopleCountroller: {fileID: 0}
+  orderScript: {fileID: 0}
+  drinks: []

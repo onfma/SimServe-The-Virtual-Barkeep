@@ -68,6 +68,8 @@ GameObject:
   - component: {fileID: 2020137537765754985}
   - component: {fileID: 403958101866082096}
   - component: {fileID: 121443668313129092}
+  - component: {fileID: -7899898500352293217}
+  - component: {fileID: -9005662790470497026}
   m_Layer: 6
   m_Name: martini_glass
   m_TagString: BarObject
@@ -248,3 +250,30 @@ CapsuleCollider:
   m_Height: 0.39580524
   m_Direction: 1
   m_Center: {x: -1.0633619, y: -1.6368084, z: 0.0019296855}
+--- !u!114 &-7899898500352293217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8619072031404160306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eff140b25d64601aabc6ba32245d099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-9005662790470497026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8619072031404160306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a0cc23904b7dd7478cdbba4ba1bb6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  peopleCountroller: {fileID: 0}
+  orderScript: {fileID: 0}
+  drinks: []

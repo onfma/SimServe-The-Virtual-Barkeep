@@ -14,13 +14,16 @@ public class people_controller : MonoBehaviour
     public List<GameObject> clientModels;
     public List<GameObject> currentClients = new List<GameObject>();
     public float rate;
-    public bool right, left;
+    public GameObject client1 = null;
+    public Animator client1_animator = null;
+    public GameObject client2 = null;
+    public Animator client2_animator = null;
+    public int orderC1, orderC2;
+    private int clientToDestroy = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        right = false;
-        left = false;
         clientModels = new List<GameObject>(){
             Man1, 
             Man2,
@@ -51,27 +54,47 @@ public class people_controller : MonoBehaviour
     
     IEnumerator CreateNewClient()
     {
+        int clientNr = 0; 
         int randomIndex = UnityEngine.Random.Range(0, 6);
         GameObject character = clientModels[randomIndex];
-        GameObject newClient = Instantiate(character, transform.position, Quaternion.identity);
-        newClient.transform.parent = transform;
-        currentClients.Add(newClient); 
-        string gone = "";
-
+        GameObject newClient = null;
+        Animator animator = null;
+        if(client1 == null){
+            client1 = Instantiate(character, transform.position, Quaternion.identity);
+            client1.transform.parent = transform;
+            currentClients.Add(client1); 
+            client1_animator = client1.GetComponent<Animator>();
+            newClient = client1;
+            animator = client1_animator; 
+            clientNr = 1;
+        }
+        else{
+            if(client2 == null){
+                client2 = Instantiate(character, transform.position, Quaternion.identity);
+                client2.transform.parent = transform;
+                currentClients.Add(client2); 
+                client2_animator = client2_animator.GetComponent<Animator>();
+                newClient = client2;
+                animator = client2_animator; 
+                clientNr = 2;
+            }
+        }
         Vector3 currentPosition = newClient.transform.position;
         currentPosition.y = 0.1f;
         newClient.transform.position = currentPosition;
-
         yield return new WaitForSeconds(5);
-
-        Animator animator = newClient.GetComponent<Animator>();
         if (animator != null)
         {
             animator.SetBool("entering", false);
             animator.SetTrigger("start order");
         }
-        int myOrder = order_script.NewOrder();
-
+        if(clientNr == 1){
+            orderC1 = order_script.NewOrder();
+        }
+        else{
+            orderC2 = order_script.NewOrder();
+        }
+        
         currentPosition = newClient.transform.position;
         currentPosition.y = 0.1f;
         newClient.transform.position = currentPosition;
@@ -79,20 +102,15 @@ public class people_controller : MonoBehaviour
         yield return new WaitForSeconds(4);
 
         animator.SetBool("ordering", false);
-        if(right == false){
+        if(clientNr == 1){
             animator.SetTrigger("done ordering right");
-            right = true;
-            gone = "right";
         }
         else{
-            if(left == false){
+            if(clientNr == 2){
                 animator.SetTrigger("done ordering left");
-                left = true;
-                gone = "left";
             }
             else{
                 animator.SetBool("stay in front", true);
-                gone = "stayed";
             }
         }
 
@@ -112,46 +130,76 @@ public class people_controller : MonoBehaviour
         currentPosition.y = 0.1f;
         newClient.transform.position = currentPosition;
 
+    }
 
-        yield return new WaitForSeconds(5);
-        animator.SetBool("drunk idle", false);
-        animator.SetBool("simple idle", false);
-        // in loc de yeild wait for drink delivery
-        // while distanta dintre personaj si un pahar < min distance
-        
-        if (animator != null)
+   public void GotOrder(List<string> drinks, int id)
+    {
+        int client;
+        Animator anim;
+        if (orderC1 == id)
         {
-            animator.SetBool("waiting for drink", false);
-            animator.SetTrigger("got drink");
-            //in loc de setat liked drink det scorul bauturii cu pos de "hated drink"
-            animator.SetTrigger("liked drink");
-            animator.SetTrigger("leaving");
-
-        }
-        if (myOrder == 1)
-        {
-            order_script.HideOrder1();
-        }
-        else{
-            order_script.HideOrder2();
-        }
-        yield return new WaitForSeconds(30);
-        if(gone == "left"){
-            left = false;
+            anim = client1_animator;
+            client = 1;
         }
         else
         {
-            if(gone == "right"){
-                right = false;
-            }
-            else{
-                animator.SetBool("stay in front", false);
-            }
+            anim = client2_animator;
+            client = 2;
         }
-        
-        Destroy(newClient);
 
-        currentClients.Remove(newClient);
+        bool drinkIsGood = order_script.SendOrder(drinks, id);
+        anim.SetBool("drunk idle", false);
+        anim.SetBool("simple idle", false);
+
+        anim.SetBool("waiting for drink", false);
+        anim.SetTrigger("got drink");
+        anim.SetTrigger("leaving");
+
+        if (drinkIsGood)
+        {
+            anim.SetTrigger("liked drink");
+        }
+        else
+        {
+            anim.SetTrigger("hated drink");
+        }
+
+        if (id == 1)
+        {
+            order_script.HideOrder1();
+        }
+        else
+        {
+            order_script.HideOrder2();
+        }
+
+        // Delay destruction of client GameObjects
+        clientToDestroy = client;
+        Invoke("DestroyClient", 30f);
+    }
+
+    // Method to destroy client GameObjects after delay
+    private void DestroyClient()
+    {
+        GameObject client = null;
+        switch (clientToDestroy)
+        {
+            case 1:
+                client = client1;
+                client1 = null;
+                break;
+            case 2:
+                client = client2;
+                client2 = null;
+                break;
+        }
+
+        if (client != null)
+        {
+            Destroy(client);
+            currentClients.Remove(client);
+        }
+        clientToDestroy = 0;
     }
     
     // Update is called once per frame

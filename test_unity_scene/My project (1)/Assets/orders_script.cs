@@ -165,4 +165,18 @@ public class orders_script : MonoBehaviour
         }
     }
 
+    public bool SendOrder(List<string> drinks,int orderNr){
+        if(orderNr == 1){
+            if(order1_ingredients.SequenceEqual(drinks)){
+                return true;
+            }
+        }
+        else{
+            if(order2_ingredients.SequenceEqual(drinks)){
+                return true;
+            }
+        }
+        return false;
+    }
+
 }

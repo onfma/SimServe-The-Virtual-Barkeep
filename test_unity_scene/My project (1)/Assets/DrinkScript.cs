@@ -22,10 +22,13 @@ public class DrinkScript : MonoBehaviour
         if (collision.collider.CompareTag("BarObject") && drinks.Count > 0)
         { 
             Renderer renderer = collision.gameObject.GetComponent<Renderer>();
+            glass_script glass_script = collision.gameObject.GetComponent<glass_script>();
+            glass_script.AddDrink(drinks);
             if (renderer != null)
             {
                 renderer.material = newMaterial;
             }
+            drinks = new List<string>();
         }
 
         rb = collision.gameObject.GetComponent<Rigidbody>();

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1281651443831361174}
   - component: {fileID: 1432473001919057107}
   - component: {fileID: -5032487742662633482}
+  - component: {fileID: -4906036939849409828}
   m_Layer: 6
   m_Name: whiskey_glass
   m_TagString: BarObject
@@ -179,6 +180,21 @@ MonoBehaviour:
   m_ThrowAngularVelocityScale: 1
   m_GravityOnDetach: 0
   m_RetainTransformParent: 1
+--- !u!114 &-4906036939849409828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777340713569414979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a0cc23904b7dd7478cdbba4ba1bb6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  peopleCountroller: {fileID: 0}
+  orderScript: {fileID: 0}
+  drinks: []
 --- !u!1 &5855025097964731230
 GameObject:
   m_ObjectHideFlags: 0

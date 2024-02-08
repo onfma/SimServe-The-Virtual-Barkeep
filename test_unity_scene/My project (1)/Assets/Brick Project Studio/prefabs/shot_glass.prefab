@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1888960110469092722}
   - component: {fileID: 7006373694664960432}
   - component: {fileID: -7273828792071898230}
+  - component: {fileID: 721669484591067639}
   m_Layer: 6
   m_Name: shot_glass
   m_TagString: BarObject
@@ -179,6 +180,21 @@ MonoBehaviour:
   m_ThrowAngularVelocityScale: 1
   m_GravityOnDetach: 0
   m_RetainTransformParent: 1
+--- !u!114 &721669484591067639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87278435990975655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a0cc23904b7dd7478cdbba4ba1bb6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  peopleCountroller: {fileID: 0}
+  orderScript: {fileID: 0}
+  drinks: []
 --- !u!1 &3604864098138141010
 GameObject:
   m_ObjectHideFlags: 0
